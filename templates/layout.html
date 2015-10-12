@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <strong><link rel="stylesheet" href="{{ url_for('static', filename='css/bcrs.css') }}"></strong>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyC7kVB8f5olK3EHnL7950hhFVRFuWJHSM4&sensor=true" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='javascript/maps.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascript/beachConGIS.js') }}"></script>
+
+    <title>BCRS V3 Beta</title>    
+  </head>
+  <body onload="initialize()">
+    <div class='pageWrapper'> 
+        <header>
+        </header> 
+	<nav class='clear'>
+	<ul>
+	<li><a href="">Home</a></li>
+	<li><a href="#">About</a></li>
+	<li><a href="#">People</a></li>
+	<li><a href="#">Data</a></li>
+	<li><a href="#">Contact Us</a></li>
+	<li><a href="#">Login</a></li>
+	</ul>
+	</nav>
+    	<div class="container">
+      	    {% block content %}
+      	    {% endblock %}
+        </div>
+      <footer>
+         <p>Copyright Codemonkey 2013</p>
+      </footer>
+    </div>
+  </body>
+</html>

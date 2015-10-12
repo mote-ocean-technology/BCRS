@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Searchbar goes here -->
+<aside class='bcrs'>
+   <div class='title'><form onsubmit = 'bcrs_search()'>Find a beach:
+   <input name='bcrs_search' placeholder='County, Beach or ZIP'></input>
+   </form>
+   </div>
+   <div id='map-canvas-bcrs'>
+   </div>
+</aside>
+{% endblock %}
+
+

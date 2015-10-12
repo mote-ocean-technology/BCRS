@@ -1,0 +1,45 @@
+<!doctype HTML>
+<html>
+<head>
+<title>BCRS Version 3 BETA</title>
+<style>
+@import url(static/css/bcrs.css);
+</style>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyC7kVB8f5olK3EHnL7950hhFVRFuWJHSM4&sensor=true" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="static/javascript/beachConGIS.js"></script>
+</head>
+<body onload="initialize()" onunload="GUnload()">
+<div class='pageWrapper'>
+<header>
+</header>
+<nav class='clear'>
+<ul>
+<li><a href="">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">People</a></li>
+<li><a href="#">Data</a></li>
+<li><a href="#">Contact Us</a></li>
+<li><a href="#">Login</a></li>
+</ul>
+</nav>
+</header>
+
+<div class='contentWrapper'>
+<!-- first sidebar goes here -->
+<aside class='bcrs'>
+<div class='title'><form onsubmit = 'bcrs_search()'>Find a beach: 
+<input name='bcrs_search' placeholder='County, Beach or ZIP'></input>
+</form>
+
+</div>
+<div id='map-canvas-bcrs'>
+</div>
+</aside>
+</div>
+<footer>
+<p>Copyright Codemonkey 2013</p>
+</footer>
+</div>
+</body>
+</html>

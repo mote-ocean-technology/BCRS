@@ -1,0 +1,95 @@
+<!doctype HTML>
+<html>
+<head>
+<title>Beach Conditions Reporting System</title>
+<style>
+@import url(static/css/bcrs.css);
+</style>
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46275576-1', 'mote.org');
+  ga('send', 'pageview');
+
+</script>
+<script src="//maps.googleapis.com/maps/api/js?v=3&key=AIzaSyC7kVB8f5olK3EHnL7950hhFVRFuWJHSM4&sensor=true" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://coolcloud.mote.org/bcrs/static/javascript/bcrs.js"></script>
+<script src="http://coolcloud.mote.org/bcrs/static/javascript/slimbox2.js"></script>
+<script type="text/javascript">
+
+function initialize() {
+  var mapOptions = {
+  zoom: 6,
+  center: new google.maps.LatLng(29.197, -83.844)
+  };
+
+  var map_bcrs = new google.maps.Map(document.getElementById('map-canvas-bcrs'), mapOptions);
+  panHandle(map_bcrs);
+  southWest(map_bcrs);
+  //set up handler for menu clicks
+  $(".clear li").click(function(){
+     if (this.value == 2) {
+      contactUs();
+    }
+    if (this.value == 3) {
+      emailSubs();
+    }
+  })
+}
+</script>
+</head>
+<body onload="initialize()">
+
+<div class='pageWrapper'>
+<header>
+</header>
+<nav class='clear'>
+<ul>
+<li value='1'><a href="">Home</a></li>
+<li value='2'><a href="#">Contact Us</a></li>
+<li value='3'><a href="#">Email Subscriptions</a></li>
+</ul>
+</nav>
+
+<!-- first sidebar goes here -->
+<div class='button_bar'>
+<!--
+  TO DO: Add search cacpacity
+  TO DO: Get counties via ajax and build buttons
+         through javascript function
+-->
+<center>
+<! -- Sarasota Ghosted on 2014-12-31 -->
+<button class='countyButton' onclick=getCountyCenter("sarasota")>Sarasota</button>
+<button class='countyButton' onclick=getCountyCenter("manatee")>Manatee</button>
+<button class='countyButton' onclick=getCountyCenter("lee")>Lee</button>
+<button class='countyButton' onclick=getCountyCenter("pinellas")>Pinellas</button>
+<button class='countyButton' onclick=getCountyCenter("charlotte")>Charlotte</button>
+<button class='countyButton' onclick=getCountyCenter("escambia")>Escambia</button>
+<button class='countyButton' onclick=getCountyCenter("okaloosa")>Oklaloosa</button>
+<button class='countyButton' onclick=getCountyCenter("franklin")>Franklin</button>
+<button class='countyButton' onclick=getCountyCenter("gulf")>Gulf</button>
+</center>
+</div>
+<div class='title_bar'></div>
+<div id='map-canvas-bcrs'></div>
+
+</div>
+</div>
+<footer>
+This service provides beach condition reports from select beaches in the Southwest coast of Florida and the Florida Panhandle.
+The reports are subjective (no measurements taken, just an estimate) and designed to indicate to the beachgoer which beach may be more preferable to visit at a particular time.
+<p>
+Most reports will be posted at 10 am and 3 pm local time. If a posting is late, please understand that the beach reporters may be involved in more pressing matters.
+<p>
+Get the Beach Conditions Report via telephone at 1-941-BEACHES. (1-941-232-2437)
+<hr>
+<p>&copy 2014 Mote Marine Laboratory</p>
+</footer>
+</body>
+</html>

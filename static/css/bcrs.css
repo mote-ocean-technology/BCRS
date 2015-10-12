@@ -1,0 +1,465 @@
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1.2;
+    background-color: #eeeeee;
+}
+ol {
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: .8em;
+    width: 100%;
+}
+
+.infoBoxTable {
+  margin-top: 0px;
+  font-size: 1em;
+  font-style: bold;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.thumbDiv {
+  border: 1 px solid blue;
+  width: 128px;
+  height: 128 px;
+  overflow: hidden;
+}
+
+.thumbTable {
+  border: 0px;
+  margin-top: 0px;
+  font-size: 1em;
+  font-style: bold;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.opd_table  {
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: .8em;
+    width: 100%;
+    height: 87%;
+}
+
+.td_infoBoxSensor {
+  border: 0px solid red;
+  background-color: white;
+  color: black;
+  font-size: 1em;
+  width: 40%;
+  text-align: left;
+}
+.td_infoBoxData {
+  border: 0px solid green;
+  background-color: white;
+  color: black;
+  font-size: 1em;
+  width: 60%;
+  text-align: left;
+}
+
+.td_thumbURL {
+  border: 0px solid red;
+  background-color: white;
+  color: black;
+  font-size: .05em;
+  width: 128px;
+  height: 128px;
+  overflow: none;
+}
+
+.tr_infoxBox {
+  border: 2px solid red;
+  background-color: white;
+}
+
+.wx_table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: .8em;
+    width: 100%;
+    background-color: rgb(235,243,246);
+}
+
+.tr_wx {
+        text-align: left;
+        border: 0px;
+        padding: 5px;
+        background-color: rgb(191,237,242);
+}
+td {
+	border: 1px solid black;
+	padding-right: 10px;
+        background-color: #ffffff;
+}
+
+.td_wx{
+    font-size: 1.25em;
+    border: 0px;
+    padding-right: 10px;
+    background-color: rgb(191,237,242);
+}
+
+th {
+    font-size: 1em;
+    padding-right: 10px;
+    border: 1px solid black;
+    background-color: #44bbff;
+    color: black;
+}
+
+.td_good {
+    font-size: 1em;
+    border: 1px solid black;
+    background-color: rgb(20,247,20);
+}
+.td_warn {
+    font-size: 1em;
+    border: 1px solid black;
+    background-color: rgb(247,217,20);
+}
+.td_crit {
+    font-size: 1em;
+    border: 1px solid black;
+    background-color: rgb(247,20,46);
+}
+
+th {
+    font-size: 1em;
+    padding-right: 10px;
+    border: 1px solid black;
+    background-color: #44bbff;
+    color: black;
+}
+
+/* end reset browser styles */
+
+.clear:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.clear {
+	zoom: 1;
+}
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+header {
+        max-width: 1024px;
+	height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+	padding-bottom: 0px;
+	background-image:url('/bcrs_v3/static/images/bcrs_header.jpg');
+}
+
+header h1 {
+	font-size: 3em;
+	color: white;
+	font-weight: bold;
+	padding-top: 30px;
+	clear: both;
+	padding-left: 10px;
+}
+
+nav {
+	background-color: rgb(0,0,0);
+	border: 1px solid rgba(255,255,255,.5);
+	border-left: none;
+	border-right: none;
+}
+nav ul {
+	padding: 0;
+	margin: 0;
+}
+nav li {
+	float: left;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+nav a {
+	float: left;
+	font-size: .8em;
+	color: white;
+	font-weight: normal;
+	text-decoration: none;
+	padding: 10px;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+nav li:last-of-type a {
+	border-right: none;
+}
+nav a:hover {
+	background-color: rgb(115,109,179);
+}
+aside h2 {
+	font-size: 1.3em;
+	margin-top: 10px;
+}
+aside h3 {
+	font-size: 1.1em;
+	margin-top: 15px;
+}
+aside p, aside li {
+	font-size: .75em;
+	margin-top: 10px;
+}
+.main h2 {
+	font-size: 2em;
+	margin-top: 10px;
+}
+.main h3 {
+	font-size: 1.5em;
+	margin-top: 20px;
+}
+
+.main p {
+	margin-bottom: 15px;
+}
+
+footer {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 15px;
+	font-size: .8em;
+	padding: 10px 200px 10px 200px;
+	background-color: rgb(8,2,50);
+	color: rgb(204,204,204);
+    text-align: center;
+}
+
+footer a {
+	color: white;
+}
+
+footer p {
+    margin-top: 1em;
+}
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* uncomment this style if you want the entire page -- including background colors --
+   constrained inside a 1200 pixel, centered box */
+
+.pageWrapper {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.opd {
+  text-align: center;
+  margin-top: 1px;
+  height: 180px;
+  float: left;
+  width: 82%;
+  border: 1px solid #aaaadd;
+  background-color: #eeeeee;
+  padding: 0px;
+}
+
+.bcrs {
+  margin-top: 1px;
+  text-align: center;
+  float: right;
+  width: 100%;
+  height: 530px;
+  margin-bottom: 1px;
+  background-color: #ffffff;
+  border: 1px solid black;
+}
+.auv {
+  margin-top: 1px;
+  text-align: center;
+  float: left;
+  width: 49.5%;
+  height: 530px;
+  margin-bottom: 1px;
+  background-color: #ffffff;
+  border: 1px solid black;
+}
+
+.wxcond {
+  padding: 0px;
+  font-size: .75em;
+  text-align: center;
+  margin-top: 1px;
+  float: right;
+  width: 18%;
+  height: 180px;
+  border: 1px solid #aaaadd;
+  background-color: rgb(191,237,242);
+}
+
+footer {
+  margin-top: 1px;
+  clear: both;
+}
+
+.contentWrapper {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+}
+
+nav ul, header h1, footer p,{
+	margin: 0 auto;
+}
+
+.infoWindow {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(8,2,50);
+    color: white;
+    font-size: 1.25em;
+    left: 100px;
+    top: 100px;
+}
+
+.button_bar {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(8,2,50);
+    color: white;
+    font-size: 1.25em;
+}
+
+.title_bar {
+    width: 100%;
+    height: 25px;
+    background-color: rgb(8,2,50);
+    color: white;
+    font-size: 1.25em;
+    display: none;
+    text-align: center;
+}
+
+.title {
+    width: 100%;
+    height: 25px;
+    background-color: rgb(8,2,50);
+    color: white;
+    font-size: 1.25em;
+}
+.infoBox {
+    margin-top: 0px;
+    border: 0px solid red;
+    background-color: white);
+    color: white;
+    width: 350px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.infoBoxTitle {
+  font-size: 1.5em;
+  color: black;
+  font-style: bold;
+  background-color: white;
+  text-align: center;
+}
+
+#info-window {
+border: 2px solid red;
+width: 100%;
+height: 503px;
+background-color: white;
+font: 1.0em;
+}
+
+#map-canvas-bcrs {
+width: 100%;
+height: 600px;
+text-align: center;
+}
+
+#map-canvas-auv {
+width: 100%;
+height: 503px;
+}
+.countyButton {
+  -moz-box-shadow:inset 0px 4px 14px 0px #cae3fc;
+  -webkit-box-shadow:inset 0px 4px 14px 0px #cae3fc;
+  box-shadow:inset 0px 4px 14px 0px #cae3fc;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #4197ee) );
+  background:-moz-linear-gradient( center top, #79bbff 5%, #4197ee 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#4197ee');
+  background-color:#79bbff;
+  -webkit-border-top-left-radius:8px;
+  -moz-border-radius-topleft:8px;
+  border-top-left-radius:8px;
+  -webkit-border-top-right-radius:8px;
+  -moz-border-radius-topright:8px;
+  border-top-right-radius:8px;
+  -webkit-border-bottom-right-radius:8px;
+  -moz-border-radius-bottomright:8px;
+  border-bottom-right-radius:8px;
+  -webkit-border-bottom-left-radius:8px;
+  -moz-border-radius-bottomleft:8px;
+  border-bottom-left-radius:8px;
+  text-indent:0;
+  border:1px solid #469df5;
+  display:inline-block;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  font-style:normal;
+  height:20px;
+  line-height:20px;
+  width:90px;
+  text-decoration:none;
+  text-align:center;
+}
+.countyButton:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4197ee), color-stop(1, #79bbff) );
+  background:-moz-linear-gradient( center top, #4197ee 5%, #79bbff 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4197ee', endColorstr='#79bbff');
+  background-color:#4197ee;
+}.countyButton:active {
+  position:relative;
+  top:1px;
+}</style>
